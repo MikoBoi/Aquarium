@@ -1,0 +1,12 @@
+/.idea
+
+/Aquarius/*
+
+/Site/__pycache__/*
+/Site/migrations/*
+/Site/__init__.py
+
+/theme/__pycache__/*
+/theme/__init__.py
+
+/db.sqlite3

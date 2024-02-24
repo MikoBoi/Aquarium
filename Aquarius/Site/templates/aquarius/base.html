@@ -1,0 +1,29 @@
+{% load static %}
+<!--{% load tailwind_tags %} Можно отключить если 7 строка включена!-->
+<!DOCTYPE html>
+<html lang="en" class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white mt-16">
+<head>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'aquarius/images/croppedaqua.jpg' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'aquarius/css/output.css' %}" >
+    <meta charset="UTF-8">
+<!--    <script src="https://cdn.tailwindcss.com"></script>-->
+    <title>{% block title %}{% endblock %}</title>
+<!--    {% tailwind_css %} Можно отключить если 7 строка включена!-->
+</head>
+{% if request.path == '/' %}
+    {% include "aquarius/header.html" %}
+{% endif %}
+
+<body>
+{% block content %}
+{% endblock %}
+</body>
+{% if request.path == '/' %}
+    {% include "aquarius/footer.html" %}
+{% endif %}
+
+</html>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="{% static 'aquarius/js/script.js' %}"></script>
